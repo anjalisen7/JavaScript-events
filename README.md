@@ -1,0 +1,2 @@
+# JavaScript-events
+COLOR CHANGE ON CLICK (EVEN OR ODD)
