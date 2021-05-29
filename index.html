@@ -7,22 +7,15 @@
     <title>json</title>
 </head>
 <body>
-     <p id="demo"></p>
-     <p id="demo1"></p>
-     <!-- <button id="btn" onclick="get()">ok</button> -->
-     <script>
+    <p id="demo"></p>
+    <script>
+        var obj = {name: "anjali", age:25 , city: "gwalior"};
+        var x = JSON.stringify(obj);
+        localStorage.setItem("test", x);
 
-          var obj = {name:'ashish', age: 29, city:'gwalior' , status:'single'};
-            var x = JSON.stringify(obj);
-            document.getElementById('demo').innerHTML = x;
-
-             
-              var  obj1 = '{"name":"ashish","age":29,"city":"gwalior","status":"single"}';
-               var y = JSON.parse(obj1);
-               document.getElementById("demo1").innerHTML = y.city;
-             
-             
-         </script>
-
+        var y = localStorage.getItem("test")
+        var z =JSON.parse(y);
+        document.getElementById("demo").innerHTML = z.city;
+    </script> 
 </body>
 </html>
